@@ -66,6 +66,12 @@ vim.keymap.set('n', '<leader>h', '<C-w>h', { desc = 'Focus left window' })
 -- Go to right window (editor)
 vim.keymap.set('n', '<leader>l', '<C-w>l', { desc = 'Focus right window' })
 
+-- LSP keymaps
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = 'Go to definition' })
+vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { desc = 'Go to declaration' })
+vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, { desc = 'Go to implementation' })
+vim.keymap.set('n', 'gr', vim.lsp.buf.references, { desc = 'Go to references' })
+
 -- Setup LSP
 local lspconfig = require 'lspconfig'
 local cmp = require 'cmp'
